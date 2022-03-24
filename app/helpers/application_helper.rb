@@ -1,5 +1,5 @@
 module ApplicationHelper
-
+  include SessionsHelper
   # ==========ここから追加する==========
   def avatar_url(user)
     return user.profile_photo unless user.profile_photo.nil?
