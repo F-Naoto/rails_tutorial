@@ -2,8 +2,10 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
-
+gem 'faker',                   '2.20.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
+gem 'will_paginate',           '3.3.1'
+gem 'bootstrap-will_paginate', '1.0.0'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
 gem 'bcrypt',         '3.1.13'
 gem 'bootstrap-sass', '3.4.1'
