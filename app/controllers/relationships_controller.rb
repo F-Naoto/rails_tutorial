@@ -1,0 +1,20 @@
+class RelationshipsController < ApplicationController
+  # def new newアクションは不要？
+  # end
+  # def create
+  # user = User.find_by(id:params[:id])
+  # current_user.follow(user)
+  # redirect_to user
+  # end
+  def create
+    user = User.find(params[:followed_id])
+    current_user.follow(user)
+    redirect_to user
+  end
+
+  def destroy
+    user = Relationship.find(params[:id]).followed
+    current_user.unfollow(user)
+    redirect_to user
+  end
+end
